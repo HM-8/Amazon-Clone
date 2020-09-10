@@ -7,7 +7,7 @@ import { useStateValue } from "../stateProvider";
 import { auth } from "../js/firebase";
 
 function Header() {
-	const [{ basket, user }, dispatch] = useStateValue();
+	const [{ basket, user }] = useStateValue();
 
 	const handleAuthentication = () => {
 		if (user) {
@@ -21,6 +21,7 @@ function Header() {
 				<img
 					className="header__logo"
 					src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+					alt="text"
 				></img>
 			</Link>
 
@@ -33,7 +34,7 @@ function Header() {
 				<Link className="link" to={!user && "/login"}>
 					<div onClick={handleAuthentication} className="header__option">
 						<span className="header__optionOne">
-							Hello, <strong className='user'>{user ? user?.email : "Guest"}</strong>
+							Hello, <strong className='user'>{user ? user.email : "Guest"}</strong>
 						</span>
 						<span className="header__optionTwo">
 							{user ? "Sign Out" : "Sign In"}
