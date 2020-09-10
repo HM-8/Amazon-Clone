@@ -20,12 +20,6 @@ function HeaderTwo() {
           <span className="header2__option__one__two">Registry</span>
           <span className="header2__option__one__two">Sell</span>
         </div>
-
-        {/* <div className="header2__option__two">
-          <span className="header2__option__two__one">
-            Amazon's response to COVID-19
-          </span>
-        </div> */}
       </div>
     </div>
   );
