@@ -91,3 +91,24 @@
     text-decoration: none;
     border: none;
 }
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: #37475a;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.top:hover {
+    background-color: #4c6078;
+    transition: 3ms;
+}
+
+.home__container > a {
+    text-decoration: none;
+    border: none;
+}
