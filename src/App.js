@@ -9,7 +9,7 @@ import Login from "./Components/Login";
 import Footer from "./Components/Footer";
 import CreateAccount from "./Components/CreateAccount";
 import { auth } from "./js/firebase";
-import { useStateValue } from "./stateProvider";
+import { useStateValue } from "./stateProvider.js";
 
 function App() {
 	const [{}, dispatch] = useStateValue();
