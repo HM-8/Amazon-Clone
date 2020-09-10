@@ -63,6 +63,10 @@
     color: #cccccc;
 }
 
+.user {
+    color: #ffffff;
+}
+
 .header__optionTwo {
     font-size: 14px;
     line-height: 15px;
@@ -81,4 +85,9 @@
 
 .header__basketCount {
     margin: 0 10px;
+}
+
+.link {
+    text-decoration: none;
+    border: none;
 }
