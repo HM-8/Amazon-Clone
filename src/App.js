@@ -10,6 +10,7 @@ import Footer from "./Components/Footer";
 import CreateAccount from "./Components/CreateAccount";
 import { auth } from "./js/firebase";
 import { useStateValue } from "./stateProvider.js";
+import BackToTop from "./Components/BackToTop";
 
 function App() {
 	const [{}, dispatch] = useStateValue();
@@ -32,7 +33,7 @@ function App() {
 
 	return (
 		<Router>
-			<div className="app">
+			<div className="app" id="app">
 				<Switch>
 					{/* login route */}
 					<Route path="/login">
@@ -49,6 +50,7 @@ function App() {
 						<Header />
 						<HeaderTwo />
 						<Checkout />
+						<BackToTop />
 						<Footer />
 					</Route>
 
@@ -57,6 +59,7 @@ function App() {
 						<Header />
 						<HeaderTwo />
 						<Home />
+						<BackToTop />
 						<Footer />
 					</Route>
 				</Switch>
