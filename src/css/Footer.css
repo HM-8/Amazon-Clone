@@ -1,15 +1,21 @@
 .footer {
-    height: 400px;
-    display: flex;
     background-color: #232f3e;
-    position: sticky;
-    justify-content: space-evenly;
+    position: relative;
+    bottom: 0;
+    z-index: 1;
     color: #ffffff;
     overflow: hidden;
+    width: 100%;
 }
 
-.footer > div {
-    margin-top: 50px;
+.footer__container {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.footer__container > div {
+    margin: 50px 0;
 }
 
 .footer__title {
