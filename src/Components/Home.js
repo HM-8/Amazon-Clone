@@ -66,62 +66,13 @@ function Home() {
 				<div className="home__row">
 					
 					<Product
-						id={5}
+						id={6}
 						title={
-							"Sceptre E248W-19203R 24" +
-							"Ultra Thin 75Hz 1080p LED Monitor 2x HDMI VGA Build-in Speakers, Metallic Black 2018"
+							"Sony X800H 65 Inch TV: 4K Ultra HD Smart LED TV with HDR and Alexa Compatibility - 2020 Model"
 						}
-						price={104.68}
-						image="https://images-na.ssl-images-amazon.com/images/I/51d3J1EYbVL._AC_US240_FMwebp_QL65_.jpg"
-						rating={5}
-					/>
-				</div>
-
-				<div className="home__row">
-					<Product
-						id={5}
-						title={
-							"Sceptre E248W-19203R 24" +
-							"Ultra Thin 75Hz 1080p LED Monitor 2x HDMI VGA Build-in Speakers, Metallic Black 2018"
-						}
-						price={104.68}
-						image="https://images-na.ssl-images-amazon.com/images/I/51d3J1EYbVL._AC_US240_FMwebp_QL65_.jpg"
-						rating={5}
-					/>
-
-					<Product
-						id={5}
-						title={
-							"Sceptre E248W-19203R 24" +
-							"Ultra Thin 75Hz 1080p LED Monitor 2x HDMI VGA Build-in Speakers, Metallic Black 2018"
-						}
-						price={104.68}
-						image="https://images-na.ssl-images-amazon.com/images/I/51d3J1EYbVL._AC_US240_FMwebp_QL65_.jpg"
-						rating={5}
-					/>
-				</div>
-
-				<div className="home__row">
-					<Product
-						id={5}
-						title={
-							"Sceptre E248W-19203R 24" +
-							"Ultra Thin 75Hz 1080p LED Monitor 2x HDMI VGA Build-in Speakers, Metallic Black 2018"
-						}
-						price={104.68}
-						image="https://images-na.ssl-images-amazon.com/images/I/51d3J1EYbVL._AC_US240_FMwebp_QL65_.jpg"
-						rating={5}
-					/>
-
-					<Product
-						id={5}
-						title={
-							"Sceptre E248W-19203R 24" +
-							"Ultra Thin 75Hz 1080p LED Monitor 2x HDMI VGA Build-in Speakers, Metallic Black 2018"
-						}
-						price={104.68}
-						image="https://images-na.ssl-images-amazon.com/images/I/51d3J1EYbVL._AC_US240_FMwebp_QL65_.jpg"
-						rating={5}
+						price={903.09}
+						image="https://m.media-amazon.com/images/I/71+F+eS7qfL._QL65_AC_UL640_.jpg"
+						rating={4}
 					/>
 				</div>
 			</div>
