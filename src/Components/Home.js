@@ -4,7 +4,7 @@ import Product from "./Product";
 
 function Home() {
 	return (
-		<div className="home" id="home">
+		<div className="home">
 			<div className="home__container">
 				<img
 					className="home__image"
@@ -62,12 +62,68 @@ function Home() {
 						rating={5}
 					/>
 				</div>
-        
-				<a href="#home">
-					<div className="top">
-						<p>Back to Top</p>
-					</div>
-				</a>
+
+				<div className="home__row">
+					
+					<Product
+						id={5}
+						title={
+							"Sceptre E248W-19203R 24" +
+							"Ultra Thin 75Hz 1080p LED Monitor 2x HDMI VGA Build-in Speakers, Metallic Black 2018"
+						}
+						price={104.68}
+						image="https://images-na.ssl-images-amazon.com/images/I/51d3J1EYbVL._AC_US240_FMwebp_QL65_.jpg"
+						rating={5}
+					/>
+				</div>
+
+				<div className="home__row">
+					<Product
+						id={5}
+						title={
+							"Sceptre E248W-19203R 24" +
+							"Ultra Thin 75Hz 1080p LED Monitor 2x HDMI VGA Build-in Speakers, Metallic Black 2018"
+						}
+						price={104.68}
+						image="https://images-na.ssl-images-amazon.com/images/I/51d3J1EYbVL._AC_US240_FMwebp_QL65_.jpg"
+						rating={5}
+					/>
+
+					<Product
+						id={5}
+						title={
+							"Sceptre E248W-19203R 24" +
+							"Ultra Thin 75Hz 1080p LED Monitor 2x HDMI VGA Build-in Speakers, Metallic Black 2018"
+						}
+						price={104.68}
+						image="https://images-na.ssl-images-amazon.com/images/I/51d3J1EYbVL._AC_US240_FMwebp_QL65_.jpg"
+						rating={5}
+					/>
+				</div>
+
+				<div className="home__row">
+					<Product
+						id={5}
+						title={
+							"Sceptre E248W-19203R 24" +
+							"Ultra Thin 75Hz 1080p LED Monitor 2x HDMI VGA Build-in Speakers, Metallic Black 2018"
+						}
+						price={104.68}
+						image="https://images-na.ssl-images-amazon.com/images/I/51d3J1EYbVL._AC_US240_FMwebp_QL65_.jpg"
+						rating={5}
+					/>
+
+					<Product
+						id={5}
+						title={
+							"Sceptre E248W-19203R 24" +
+							"Ultra Thin 75Hz 1080p LED Monitor 2x HDMI VGA Build-in Speakers, Metallic Black 2018"
+						}
+						price={104.68}
+						image="https://images-na.ssl-images-amazon.com/images/I/51d3J1EYbVL._AC_US240_FMwebp_QL65_.jpg"
+						rating={5}
+					/>
+				</div>
 			</div>
 		</div>
 	);
