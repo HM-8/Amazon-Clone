@@ -11,6 +11,14 @@ import CreateAccount from "./Components/CreateAccount";
 import { auth } from "./js/firebase";
 import { useStateValue } from "./stateProvider.js";
 import BackToTop from "./Components/BackToTop";
+import Payment from "./Components/Payment";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import Orders from "./Components/Orders";
+
+const promise = loadStripe(
+	"pk_test_51HQb77CAC9mBjBb45qCBEYz3r7lz6L9v6rIqVIjmeLMNNJ6cIQU05v4MvHrMebXEFws1LqklOd2trJokfypNjVP90053wU33Rn"
+);
 
 function App() {
 	const [{}, dispatch] = useStateValue();
@@ -40,7 +48,7 @@ function App() {
 						<Login />
 					</Route>
 
-					{/* createaccount route */}
+					{/* createAccount route */}
 					<Route path="/createAccount">
 						<CreateAccount />
 					</Route>
@@ -50,6 +58,26 @@ function App() {
 						<Header />
 						<HeaderTwo />
 						<Checkout />
+						<BackToTop />
+						<Footer />
+					</Route>
+
+					{/* payment route */}
+					<Route path="/payment">
+						<Header />
+						<HeaderTwo />
+						<Elements stripe={promise}>
+							<Payment />
+						</Elements>
+						<BackToTop />
+						<Footer />
+					</Route>
+
+					{/* orders route */}
+					<Route path="/orders">
+						<Header />
+						<HeaderTwo />
+						<Orders />
 						<BackToTop />
 						<Footer />
 					</Route>
