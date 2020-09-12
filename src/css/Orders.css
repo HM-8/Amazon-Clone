@@ -1,0 +1,14 @@
+.orders {
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.orders__container {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    padding: 20px 55px;
+    min-height: 100vh;
+}
