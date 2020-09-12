@@ -30,6 +30,6 @@
 .checkout__product {
     padding: 10px;
     margin: 10px 0;
-    box-shadow: 0px 0px 5px 0px  rgb(214, 214, 214);
+    /* box-shadow: 0px 0px 5px 0px  rgb(214, 214, 214); */
 }
 
