@@ -1,7 +1,9 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: 'http://localhost:9000/.netlify/functions/app' // The API (cloud function) URL
+    // The API (netlify function) URL
+    baseURL: 'https://silly-pare-f56053.netlify.app/.netlify/functions/app/'
+    // baseURL: 'http://localhost:9000/.netlify/functions/app' 
 });
 
 export default instance;

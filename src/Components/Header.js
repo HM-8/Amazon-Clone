@@ -2,13 +2,14 @@ import React from "react";
 import "../css/Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useStateValue } from "../stateProvider";
 import { auth } from "../js/firebase";
 
 function Header() {
 	const [{ basket, user }] = useStateValue();
-
+	const history = useHistory();
+	
 	const handleAuthentication = () => {
 		if (user) {
 			auth.signOut();
@@ -42,7 +43,7 @@ function Header() {
 					</div>
 				</Link>
 
-				<div className="header__option">
+				<div onClick={(e) => history.push("/orders")} className="header__option">
 					<span className="header__optionOne">Returns</span>
 					<span className="header__optionTwo">& Orders</span>
 				</div>

@@ -1,14 +1,18 @@
 .orders {
 	display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
+    background-color: #ffffff;
+    min-height: 100vh;
 }
 
 .orders__container {
-    display: flex;
-    flex-direction: row;
-    background-color: #ffffff;
-    padding: 20px 55px;
-    min-height: 100vh;
+    margin: 20px 55px;
+    flex: 0.6;
+}
+
+.orders__title {
+    padding: 10px 0px;
+}
+
+.orders__title > h3 {
+    padding-left: 10px;
 }

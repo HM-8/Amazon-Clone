@@ -101,7 +101,7 @@
     margin-bottom: 20px;
  }
 
-/* .payment__button {
+.payment__button {
     background: #feBd69;
     border-radius: 3px;
     border: 1px solid;
@@ -110,4 +110,4 @@
     width: 100%;
     border-color: #fdb454 #ffb049 #fbaa3f;
     color: #333333;
-} */
+}

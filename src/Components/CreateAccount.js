@@ -65,9 +65,7 @@ function CreateAccount() {
 
 				<p>
 					Already Have an account?
-					<Link className="link" to="/login">
-						<span> Sign-In</span>
-					</Link>
+						<span className="singin__link" onClick={e => history.push('/login')}> Sign-In</span>
 				</p>
 			</div>
 		</div>

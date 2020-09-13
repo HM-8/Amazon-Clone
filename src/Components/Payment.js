@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../css/Payment.css";
+import { db } from "../js/firebase";
 import { useStateValue } from "../stateProvider";
 import BasketProduct from "./BasketProduct";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
@@ -35,8 +36,6 @@ function Payment() {
 		getClientSecret();
 	}, [basket]);
 
-	console.log("THE SECRET IS >>>", clientSecret);
-
 	const handleSubmit = async (event) => {
 		//fancy strip stuff
 		event.preventDefault();
@@ -50,6 +49,16 @@ function Payment() {
 			})
 			.then(({ paymentIntent }) => {
 				// paymentIntent = payment confirmation
+
+				db.collection("users")
+					.doc(user?.uid)
+					.collection("orders")
+					.doc(paymentIntent.id)
+					.set({
+						basket: basket,
+						amount: paymentIntent.amount,
+						created: paymentIntent.created,
+					});
 
 				setSucceeded(true);
 				setError(null);
@@ -116,10 +125,16 @@ function Payment() {
 						<div className="payment__right__details">
 							<form onSubmit={handleSubmit}>
 								<div className="payment__right__details__priceContainer">
+									
+									<CardElement
+										className="payment__card"
+										onChange={handleChange}
+									/>
+
 									<CurrencyFormat
 										renderText={(value) => (
 											<p>
-												Order Total: <strong>{value}</strong>
+												<strong>Order Total: {value}</strong>
 											</p>
 										)}
 										decimalScale={2}
@@ -128,12 +143,6 @@ function Payment() {
 										thousandSeparator={true}
 										prefix={"$"}
 									/>
-
-									<CardElement
-										className="payment__card"
-										onChange={handleChange}
-									/>
-
 									<button
 										className="payment__button"
 										disabled={processing || disabled || succeeded}
@@ -148,7 +157,6 @@ function Payment() {
 					</div>
 				</div>
 			</div>
-		
 		</div>
 	);
 }
