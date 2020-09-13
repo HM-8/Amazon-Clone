@@ -16,7 +16,7 @@ function Home() {
 					<Product
 						id={1}
 						title="Dell Inspiron 27 AIO, 27 inch, FHD Touchscreen, Intel Core i7-10510U, NVIDIA MX110 2GB, 1TB HDD + 512GB SSD Storage, 16GB RAM, i7790-7388SLV-PUS, 15-15.99 inches"
-						price={1,333.98}
+						price={1333.98}
 						image="https://images-na.ssl-images-amazon.com/images/I/717mmm0oqnL._AC_SL1500_.jpg"
 						rating={4}
 					/>
