@@ -91,6 +91,19 @@ function Payment() {
 					</div>
 
 					<div className="payment__items">
+						{basket.length === 0 && (
+							<div className="checkout__main">
+								<img
+									className="checkout__image"
+									src="https://m.media-amazon.com/images/G/01/cart/empty/kettle-desaturated._CB445243794_.svg"
+								/>
+
+								<h3 className="checkout__emptyCart">
+									You have no orders to review
+								</h3>
+							</div>
+						)}
+
 						{basket.map((item) => (
 							<div className="checkout__product">
 								<BasketProduct
@@ -107,16 +120,25 @@ function Payment() {
 				</div>
 
 				<div className="payment__right">
-					<div className="payment__right__top">
-						<div className="payment__right__title">
-							<h3>Delivery Address</h3>
+					{user !== null && (
+						<div className="payment__right__top">
+							<div className="payment__right__title">
+								<h3>Delivery Address</h3>
+							</div>
+							<div className="payment__right__address">
+								<p>
+									<strong>Email: </strong>
+									{user?.email}
+								</p>
+								<p>
+									<strong>Street: </strong>123 Rawanda Lane
+								</p>
+								<p>
+									<strong>State: </strong>Addis Ababa, ET
+								</p>
+							</div>
 						</div>
-						<div className="payment__right__address">
-							<p>{user?.email}</p>
-							<p>123 React Lane</p>
-							<p>Los Angeles, CA</p>
-						</div>
-					</div>
+					)}
 
 					<div className="payment__right__bottom">
 						<div className="payment__right__title">
@@ -125,7 +147,6 @@ function Payment() {
 						<div className="payment__right__details">
 							<form onSubmit={handleSubmit}>
 								<div className="payment__right__details__priceContainer">
-									
 									<CardElement
 										className="payment__card"
 										onChange={handleChange}
