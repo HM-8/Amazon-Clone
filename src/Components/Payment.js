@@ -35,7 +35,7 @@ function Payment() {
 		getClientSecret();
 	}, [basket]);
 
-
+	console.log("THE SECRET IS >>>", clientSecret);
 
 	const handleSubmit = async (event) => {
 		//fancy strip stuff
@@ -50,9 +50,14 @@ function Payment() {
 			})
 			.then(({ paymentIntent }) => {
 				// paymentIntent = payment confirmation
+
 				setSucceeded(true);
 				setError(null);
 				setProcessing(false);
+
+				dispatch({
+					type: "EMPTY_BASKET",
+				});
 
 				history.replace("/orders");
 			});
@@ -137,12 +142,13 @@ function Payment() {
 									</button>
 								</div>
 
-										{error && <div>{error}</div>}
+								{error && <div>{error}</div>}
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
+		
 		</div>
 	);
 }
