@@ -35,34 +35,27 @@ function Payment() {
 		getClientSecret();
 	}, [basket]);
 
-	// This is my code
-	const orders = () => {
-		history.replace("/orders");
-	};
-	// This is my code
+
 
 	const handleSubmit = async (event) => {
 		//fancy strip stuff
 		event.preventDefault();
 		setProcessing(true);
 
-		// This is my code
-		setTimeout(orders, 10000);
-		// This is my code
+		const payload = await stripe
+			.confirmCardPayment(clientSecret, {
+				payment_method: {
+					card: elements.getElement(CardElement),
+				},
+			})
+			.then(({ paymentIntent }) => {
+				// paymentIntent = payment confirmation
+				setSucceeded(true);
+				setError(null);
+				setProcessing(false);
 
-		// const payload = await stripe
-		// 	.confirmCardPayment(clientSecret, {
-		// 		payment_method: {
-		// 			card: elements.getElement(CardElement),
-		// 		},
-		// 	})
-		// 	.then(({ paymentIntent }) => {
-		// 		setSucceeded(true);
-		// 		setError(null);
-		// 		setProcessing(false);
-
-		// 		history.replace("/orders");
-		// 	});
+				history.replace("/orders");
+			});
 	};
 
 	const handleChange = (event) => {
@@ -143,6 +136,8 @@ function Payment() {
 										<span>{processing ? <p>Processing</p> : "Buy Now"}</span>
 									</button>
 								</div>
+
+										{error && <div>{error}</div>}
 							</form>
 						</div>
 					</div>
