@@ -2,6 +2,10 @@
 
 https://clone-8affc.web.app/
 
+
+![Amazon Clone Homepage](homepage.png?raw=true "Amazon Clone Homepage")
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
