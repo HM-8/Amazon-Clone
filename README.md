@@ -1,6 +1,10 @@
 ## Deployed App Link
 
-https://clone-8affc.web.app/
+<a href="https://clone-8affc.web.app/">Amazon Clone</a>
+
+# Portfolio
+
+<a href="https://hiwotmedhin.netlify.app/">Portfolio</a>
 
 
 ![Amazon Clone Homepage](homepage.png?raw=true "Amazon Clone Homepage")
